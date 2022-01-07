@@ -76,13 +76,14 @@ class TGWebHook:
     def get():
         """ Получить telegram web hook """
         url = f'https://api.telegram.org/bot{TG_BOT_TOKEN}/getWebhookInfo'
-        requests.get(url)
+        response = requests.get(url).json()
+        return response
 
     def set():
         """ Установить telegram web hook """
         # URL на который будет отправляться уведомление о
         # новом сообщении в телеграм группе
-        urlset = 'https://cbfa-85-115-248-64.ngrok.io/tg_group_new_message'
+        urlset = 'https://853a-85-115-248-33.ngrok.io/tg_group_new_message'
         # На какие объекты в группе будет реагировать
 
         url = [
@@ -90,9 +91,11 @@ class TGWebHook:
             f'?url={urlset}',
             '&allowed_updates=[message,callback_query]'
         ]
-        requests.get(''.join(url))
+        response = requests.get(''.join(url)).json()
+        return response
 
     def delete():
         """ Удалить telegram web hook """
         url = f'https://api.telegram.org/bot{TG_BOT_TOKEN}/deleteWebhook'
-        requests.get(url)
+        response = requests.get(url).json()
+        return response

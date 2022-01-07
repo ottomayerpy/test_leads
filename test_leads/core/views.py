@@ -41,6 +41,7 @@ def vk_group_new_message(request) -> HttpResponse:
     return HttpResponse(status=200)
 
 
+@csrf_exempt
 def vk_check(request) -> HttpResponse:
     """ Проверка ВК для подтверждения URL адреса """
     # Возвращаем код, который требует ВК
