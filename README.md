@@ -104,6 +104,6 @@ python3 manage.py runserver
 #### TG_BOT_TOKEN и TG_CHANEL_ID
 Эти параметры из пункта 1 и 2 раздела "Телеграм" выше.
 
-
-
+## Демонстрация работы
+Демонстрация работы в этом ролике на youtube: https://youtu.be/nzCQPYNpzVo
 
